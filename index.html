@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Polyfleat Map</title>
+
+	<script src="bower_components/webcomponentsjs/webcomponents-lite.js"></script>
+
+	<link rel="import" href="./polyfleat-map.html">
+
+	<style is="custom-style">
+		polyfleat-map {
+			--map-size-height-custom: 500px;
+			--map-size-width-custom: 500px;
+		}
+	</style>
+	
+</head>
+<body>
+	<polyfleat-map 
+		token="pk.eyJ1IjoiZmVsaXBlc291c2EiLCJhIjoiY2lmZTZlZjdtNmluMnN5bHhjZjZibmtleSJ9.wFJg3iudeLfXKlYkZM_iCSw"
+		lat="51.505"
+		lng="-0.09"
+		zoom="10">
+	</polyfleat-map>
+
+	<!-- This token is invalid, only to examples! -->
+</body>
+</html>

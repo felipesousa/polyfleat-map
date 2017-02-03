@@ -1,0 +1,65 @@
+<link rel="import" href="/bower_components/polymer/polymer.html">
+
+<link rel="stylesheet" href="bower_components/leaflet/dist/leaflet.css">
+<script src="bower_components/leaflet/dist/leaflet.js"></script>
+
+<dom-module id="polyfleat-map">
+	<template>
+		<style> 
+
+		:host {
+			--map-size-height-default: 400px;
+			--map-size-width-default: 400px;
+		}
+
+		#map { 
+			height: var(--map-size-height-custom, var(--map-size-height-default));  
+			width: var(--map-size-width-custom, var(--map-size-width-default));
+		}
+
+		</style>
+
+		<div id="map"></div>
+	</template>
+
+	<script>
+	Polymer({
+		is: 'polyfleat-map',
+
+		properties: {
+			token: {
+				type: String,
+				value: ""
+			},
+			lat: {
+				type: Number,
+				value: 51.050
+			},
+			lng: {
+				type: Number,
+				value: -0.09
+			},
+			zoom: {
+				type: Number,
+				value: 12
+			},
+			type: {
+				type: String, 
+				value: "streets"
+			}
+		},
+
+		ready: function () {
+			const map = L.map('map').setView([this.lat, this.lng], this.zoom);
+
+			L.tileLayer(
+			'https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.png?access_token={accessToken}', {
+				maxZoom: 20,
+				id: 'mapbox.' + this.type,
+				accessToken: this.token
+			}).addTo(map);
+
+		}
+	});
+	</script>
+</dom-module>

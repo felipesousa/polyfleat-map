@@ -1,0 +1,27 @@
+{
+  "name": "polyfleat-map",
+  "authors": [
+    "Felipe Sousa <felipzbr@gmail.com>"
+  ],
+  "description": "🍃 A Polymer Component to use Leaflet Map in your application.",
+  "main": "polyflet-map.html",
+  "keywords": [
+    "maps",
+    "polymer",
+    "web-components",
+    "leaflet"
+  ],
+  "license": "MIT",
+  "homepage": "https://github.com/felipesousa/polyfleat-map",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "polymer": "^1.7.1",
+    "leaflet": "^1.0.3"
+  }
+}
