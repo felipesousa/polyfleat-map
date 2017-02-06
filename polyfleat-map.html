@@ -1,19 +1,19 @@
-<link rel="import" href="/bower_components/polymer/polymer.html">
+<link rel="import" href="../polymer/polymer.html">
 
-<link rel="stylesheet" href="/bower_components/leaflet/dist/leaflet.css">
-<script src="/bower_components/leaflet/dist/leaflet.js"></script>
+<link rel="stylesheet" href="../leaflet/dist/leaflet.css">
+<script src="../leaflet/dist/leaflet.js"></script>
 
 <dom-module id="polyfleat-map">
 	<template>
-		<style> 
+		<style>
 
 		:host {
 			--map-size-height-default: 400px;
 			--map-size-width-default: 400px;
 		}
 
-		#map { 
-			height: var(--map-size-height-custom, var(--map-size-height-default));  
+		#map {
+			height: var(--map-size-height-custom, var(--map-size-height-default));
 			width: var(--map-size-width-custom, var(--map-size-width-default));
 		}
 
@@ -44,7 +44,7 @@
 				value: 12
 			},
 			type: {
-				type: String, 
+				type: String,
 				value: "streets"
 			}
 		},
