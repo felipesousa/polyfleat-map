@@ -20,36 +20,34 @@ $ bower install --save polyfleat-map
 
 ``` html
 <polyfleat-map
-	token="YOUR MAPBOX TOKEN" <!-- REQUIRED! --> 
-	lat="YOUR LATITUDE"
-	lng="YOUR LONGITUDE"
-	zoom="ZOOM IN MAP"
-	type="TYPE OF MAP">
+    token="YOUR MAPBOX TOKEN"
+    lat="YOUR LATITUDE"
+    lng="YOUR LONGITUDE">
 </polyfleat-map>
 ```
 
-## Properties: 
-**token**: You can get your token access [here](https://www.mapbox.com/studio/). <br>
-**lat**: Your latitude value. (Number)<br>
-**lng**: Your longitude value. (Number)<br>
-**zoom**: Optional, default is 12. (Number)<br>
-**type**: set your map type, that can `pirates`, `streets`, `satellite`, `light` and `dark`. This property is **optional**, default is `streets`.
+## Properties
+
+Property  | Type        | Default   | Description
+:---      |:---         |:---       |:---
+`token`    | *String*    | `null`       | *You can get your token access [here](https://www.mapbox.com/studio/).
+`lat`    | *Number*    | `51.050`       | *Latitude value.
+`lng`    | *Number*    | `-0.09`       | *Longitude value.
+`zoom`    | *Number*    | `12`       | Zoom at map.
+`type`    | *Number*    | `streets`       | set your map type, that can `pirates`, `streets`, `satellite`, `light` and `dark`.
 
 ### Custom Size Map
 
-For default, the map is 400x400 px, but, you can set the size of map, using a simple override variables, see bellow: 
+For default, the map is 400x400 px, but, you can set the size of map, using a simple override variables, see bellow:
 
 ``` html
-
 <style is="custom-style">
-	polyfleat-map {
-		--map-size-height-custom: 300px;
-		--map-size-width-custom: 600px;
-	}
+    polyfleat-map {
+        --map-size-height-custom: 300px;
+	--map-size-width-custom: 600px;
+    }
 </style>
 ````
-
-Your are setting a height and width of map! :)
 
 ## Contributing
 1. Fork it!
